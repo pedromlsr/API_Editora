@@ -26,11 +26,6 @@ public class Livro {
     @JoinColumn(name = "editora_id", referencedColumnName = "editora_id")
     @JsonIgnore
     private Editora editora;
-
-    @ManyToOne
-    @JoinColumn(name = "autor_id", referencedColumnName = "autor_id")
-    @JsonIgnore
-    private Autor autor;
     
     public Integer getLivroId() {
         return livroId;
@@ -55,13 +50,5 @@ public class Livro {
     public void setEditora(Editora editora) {
         this.editora = editora;
     }
-
-	public Autor getAutor() {
-		return autor;
-	}
-
-	public void setAutor(Autor autor) {
-		this.autor = autor;
-	}
     
 }
