@@ -10,7 +10,7 @@ import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 
 @Entity
 @Table(name = "editora")
@@ -23,8 +23,8 @@ public class Editora {
     @Column(name = "editora_nome")
     private String editoraNome;
 
+    @JsonManagedReference(value = "editora")
     @OneToMany(mappedBy = "editora")
-    @JsonIgnore
     private List<Livro> livroList;
 
     public Integer getEditoraId() {

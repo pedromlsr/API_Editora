@@ -43,12 +43,12 @@ public class AutorController {
     }
 
     @PutMapping("/{id}")
-    public Autor update(@PathVariable Integer autorId, @RequestBody Autor autor) {
-        return autorService.update(autor, autorId);
+    public Autor update(@PathVariable Integer id, @RequestBody Autor autor) {
+        return autorService.update(autor, id);
     }
     
     @DeleteMapping("/{id}")
-    public void delete(@PathVariable Integer autorId){
-        autorService.delete(autorId);
+    public void delete(@PathVariable Integer id){
+        autorService.delete(id);
     }
 }

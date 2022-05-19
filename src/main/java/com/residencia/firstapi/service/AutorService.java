@@ -31,6 +31,7 @@ public class AutorService {
     }
 
     public Autor update(Autor autor, Integer id){
+//    	autor.setAutorId(id);
         return autorRepository.save(autor);
     }
 

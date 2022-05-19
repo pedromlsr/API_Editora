@@ -26,6 +26,7 @@ public class LivroService {
     }
     
     public Livro update(Livro livro, Integer id){
+    	livro.setLivroId(id);
         return livroRepository.save(livro);
     }
     

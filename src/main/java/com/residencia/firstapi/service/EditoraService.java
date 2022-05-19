@@ -26,6 +26,7 @@ public class EditoraService {
     }
 
     public Editora update(Editora editora, Integer id){
+    	editora.setEditoraId(id);
         return editoraRepository.save(editora);
     }
 

@@ -9,7 +9,7 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonBackReference;
 
 @Entity
 @Table(name = "livro")
@@ -22,14 +22,14 @@ public class Livro {
     @Column(name = "livro_nome")
     private String livroNome;
 
+    @JsonBackReference(value = "editora")
     @ManyToOne
     @JoinColumn(name = "editora_id", referencedColumnName = "editora_id")
-    @JsonIgnore
     private Editora editora;
     
+    @JsonBackReference(value = "autor")
     @ManyToOne
     @JoinColumn(name = "autor_id", referencedColumnName = "autor_id")
-    @JsonIgnore
     private Autor autor;
     
     public Integer getLivroId() {
