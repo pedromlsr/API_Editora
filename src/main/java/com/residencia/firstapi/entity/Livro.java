@@ -23,11 +23,13 @@ public class Livro {
     private String livroNome;
 
     @JsonBackReference(value = "editora")
+    //@JsonIgnore
     @ManyToOne
     @JoinColumn(name = "editora_id", referencedColumnName = "editora_id")
     private Editora editora;
     
     @JsonBackReference(value = "autor")
+    //@JsonIgnore
     @ManyToOne
     @JoinColumn(name = "autor_id", referencedColumnName = "autor_id")
     private Autor autor;

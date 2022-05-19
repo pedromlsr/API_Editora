@@ -11,6 +11,9 @@ import com.residencia.firstapi.repository.AutorRepository;
 @Service
 public class AutorService {
 
+	
+	
+	
     @Autowired
     private AutorRepository autorRepository;
 
@@ -31,7 +34,7 @@ public class AutorService {
     }
 
     public Autor update(Autor autor, Integer id){
-//    	autor.setAutorId(id);
+    	autor.setAutorId(id);
         return autorRepository.save(autor);
     }
 
