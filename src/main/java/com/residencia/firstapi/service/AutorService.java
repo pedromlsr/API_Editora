@@ -36,6 +36,10 @@ public class AutorService {
     public Autor update(Autor autor, Integer id){
     	autor.setAutorId(id);
         return autorRepository.save(autor);
+//        Autor autorAtualizado = findById(id);
+//        autorAtualizado.setAutorNome(autor.getAutorNome());
+//        
+//        return autorRepository.save(autorAtualizado);
     }
 
     public void delete(Integer id){
